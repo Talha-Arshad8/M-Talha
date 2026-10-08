@@ -1,0 +1,989 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1200 280"
+     width="1200"
+     height="280"
+     role="img"
+     aria-label="Muhammad Azfar, AI Engineer building agentic systems">
+
+  <defs>
+
+    <!-- ===================================================== -->
+    <!-- BACKGROUND -->
+    <!-- ===================================================== -->
+
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070A12"/>
+      <stop offset="52%" stop-color="#0C1020"/>
+      <stop offset="100%" stop-color="#171231"/>
+    </linearGradient>
+
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8B7CFF"/>
+      <stop offset="48%" stop-color="#5FE8D5"/>
+      <stop offset="100%" stop-color="#2DE1C2"/>
+    </linearGradient>
+
+    <linearGradient id="nameGradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="42%" stop-color="#E4E1FF"/>
+      <stop offset="100%" stop-color="#7FFFEA"/>
+    </linearGradient>
+
+    <linearGradient id="graphGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8B7CFF"/>
+      <stop offset="100%" stop-color="#2DE1C2"/>
+    </linearGradient>
+
+    <radialGradient id="purpleGlow" cx="88%" cy="15%" r="65%">
+      <stop offset="0%" stop-color="#7566FF" stop-opacity="0.30"/>
+      <stop offset="48%" stop-color="#7566FF" stop-opacity="0.09"/>
+      <stop offset="100%" stop-color="#7566FF" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="tealGlow" cx="82%" cy="90%" r="55%">
+      <stop offset="0%" stop-color="#2DE1C2" stop-opacity="0.13"/>
+      <stop offset="100%" stop-color="#2DE1C2" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- ===================================================== -->
+    <!-- FILTERS -->
+    <!-- ===================================================== -->
+
+    <filter id="softGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="strongGlow" x="-150%" y="-150%" width="400%" height="400%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="nameGlow" x="-20%" y="-50%" width="140%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- ===================================================== -->
+    <!-- NAME TYPING CLIP -->
+    <!-- ===================================================== -->
+
+    <clipPath id="nameClip">
+      <rect x="62" y="120" width="0" height="70">
+        <animate
+          attributeName="width"
+          from="0"
+          to="545"
+          dur="2.2s"
+          begin="0.45s"
+          fill="freeze"/>
+      </rect>
+    </clipPath>
+
+    <!-- ===================================================== -->
+    <!-- GRAPH CLIP -->
+    <!-- ===================================================== -->
+
+    <clipPath id="graphClip">
+      <rect x="700" y="30" width="460" height="230"/>
+    </clipPath>
+
+  </defs>
+
+
+  <!-- ========================================================= -->
+  <!-- BACKGROUND -->
+  <!-- ========================================================= -->
+
+  <rect
+    width="1200"
+    height="280"
+    rx="20"
+    fill="url(#bg)"
+  />
+
+  <rect
+    width="1200"
+    height="280"
+    rx="20"
+    fill="url(#purpleGlow)"
+  />
+
+  <rect
+    width="1200"
+    height="280"
+    rx="20"
+    fill="url(#tealGlow)"
+  />
+
+  <!-- border -->
+
+  <rect
+    x="1"
+    y="1"
+    width="1198"
+    height="278"
+    rx="19"
+    fill="none"
+    stroke="url(#accent)"
+    stroke-opacity="0.30"
+  />
+
+
+  <!-- ========================================================= -->
+  <!-- DECORATIVE GRID -->
+  <!-- ========================================================= -->
+
+  <g opacity="0.045"
+     stroke="#FFFFFF"
+     stroke-width="1">
+
+    <path d="M0 40H1200"/>
+    <path d="M0 80H1200"/>
+    <path d="M0 120H1200"/>
+    <path d="M0 160H1200"/>
+    <path d="M0 200H1200"/>
+    <path d="M0 240H1200"/>
+
+    <path d="M80 0V280"/>
+    <path d="M160 0V280"/>
+    <path d="M240 0V280"/>
+    <path d="M320 0V280"/>
+    <path d="M400 0V280"/>
+    <path d="M480 0V280"/>
+    <path d="M560 0V280"/>
+    <path d="M640 0V280"/>
+    <path d="M720 0V280"/>
+    <path d="M800 0V280"/>
+    <path d="M880 0V280"/>
+    <path d="M960 0V280"/>
+    <path d="M1040 0V280"/>
+    <path d="M1120 0V280"/>
+
+  </g>
+
+
+  <!-- ========================================================= -->
+  <!-- TERMINAL HEADER -->
+  <!-- ========================================================= -->
+
+  <g font-family="'SF Mono','JetBrains Mono','Fira Code',Menlo,Consolas,monospace">
+
+    <text
+      x="64"
+      y="62"
+      font-size="14"
+      fill="#66708F">
+      ~/portfolio
+    </text>
+
+    <text
+      x="160"
+      y="62"
+      font-size="14"
+      fill="#2DE1C2">
+      $ whoami
+    </text>
+
+    <text
+      x="232"
+      y="62"
+      font-size="14"
+      fill="#AAB2D0">
+      Muhammad Azfar
+    </text>
+
+    <rect
+      x="357"
+      y="48"
+      width="7"
+      height="17"
+      rx="1"
+      fill="#2DE1C2">
+
+      <animate
+        attributeName="opacity"
+        values="1;0;1"
+        dur="1s"
+        repeatCount="indefinite"/>
+
+    </rect>
+
+  </g>
+
+
+  <!-- ========================================================= -->
+  <!-- ROLE -->
+  <!-- ========================================================= -->
+
+  <text
+    x="64"
+    y="105"
+    font-family="'SF Mono','JetBrains Mono','Fira Code',Menlo,Consolas,monospace"
+    font-size="14"
+    font-weight="600"
+    letter-spacing="2.8"
+    fill="#2DE1C2">
+
+    AI ENGINEER
+
+    <tspan fill="#626B89"> / </tspan>
+
+    <tspan fill="#8B7CFF">
+      AGENTIC SYSTEMS
+    </tspan>
+
+  </text>
+
+
+  <!-- ========================================================= -->
+  <!-- NAME GLOW -->
+  <!-- ========================================================= -->
+
+  <text
+    x="64"
+    y="174"
+    font-family="Inter,'Segoe UI',Helvetica,Arial,sans-serif"
+    font-size="58"
+    font-weight="800"
+    letter-spacing="-1.5"
+    fill="#6C63FF"
+    opacity="0.17"
+    filter="url(#nameGlow)">
+    Muhammad Azfar
+  </text>
+
+
+  <!-- ========================================================= -->
+  <!-- TYPING NAME -->
+  <!-- ========================================================= -->
+
+  <g clip-path="url(#nameClip)">
+
+    <text
+      x="64"
+      y="174"
+      font-family="Inter,'Segoe UI',Helvetica,Arial,sans-serif"
+      font-size="58"
+      font-weight="800"
+      letter-spacing="-1.5"
+      fill="url(#nameGradient)">
+      Muhammad Azfar
+    </text>
+
+  </g>
+
+
+  <!-- ========================================================= -->
+  <!-- TYPING CURSOR -->
+  <!-- ========================================================= -->
+
+  <rect
+    x="64"
+    y="128"
+    width="4"
+    height="52"
+    rx="1"
+    fill="#2DE1C2">
+
+    <animate
+      attributeName="x"
+      from="64"
+      to="585"
+      dur="2.2s"
+      begin="0.45s"
+      fill="freeze"/>
+
+    <animate
+      attributeName="opacity"
+      values="0;1"
+      dur="0.15s"
+      begin="0.45s"
+      fill="freeze"/>
+
+    <animate
+      attributeName="opacity"
+      values="1;0;1"
+      dur="0.8s"
+      begin="2.8s"
+      repeatCount="indefinite"/>
+
+  </rect>
+
+
+  <!-- ========================================================= -->
+  <!-- DESCRIPTION -->
+  <!-- ========================================================= -->
+
+  <text
+    x="66"
+    y="214"
+    font-family="Inter,'Segoe UI',Helvetica,Arial,sans-serif"
+    font-size="19"
+    fill="#9AA3C7">
+
+    Building systems that
+
+    <tspan fill="#D9DDF0">reason</tspan>,
+
+    <tspan fill="#D9DDF0">act</tspan>,
+
+    <tspan fill="#D9DDF0">fail</tspan>,
+
+    <tspan fill="#2DE1C2">recover</tspan>.
+
+  </text>
+
+
+  <!-- ========================================================= -->
+  <!-- SYSTEM STATUS -->
+  <!-- ========================================================= -->
+
+  <g
+    transform="translate(65 248)"
+    font-family="'SF Mono','JetBrains Mono','Fira Code',Menlo,Consolas,monospace">
+
+    <circle
+      cx="5"
+      cy="-4"
+      r="4"
+      fill="#2DE1C2">
+
+      <animate
+        attributeName="r"
+        values="4;5;4"
+        dur="1.4s"
+        repeatCount="indefinite"/>
+
+      <animate
+        attributeName="opacity"
+        values="1;0.35;1"
+        dur="1.4s"
+        repeatCount="indefinite"/>
+
+    </circle>
+
+    <text
+      x="17"
+      y="0"
+      font-size="12"
+      fill="#697390">
+      SYSTEMS ONLINE
+    </text>
+
+  </g>
+
+
+  <!-- ========================================================= -->
+  <!-- AGENTIC SYSTEM GRAPH -->
+  <!-- ========================================================= -->
+
+  <g clip-path="url(#graphClip)">
+
+    <!-- graph ambient glow -->
+
+    <circle
+      cx="940"
+      cy="145"
+      r="115"
+      fill="#7566FF"
+      opacity="0.035">
+
+      <animate
+        attributeName="r"
+        values="105;125;105"
+        dur="5s"
+        repeatCount="indefinite"/>
+
+      <animate
+        attributeName="opacity"
+        values="0.025;0.055;0.025"
+        dur="5s"
+        repeatCount="indefinite"/>
+
+    </circle>
+
+
+    <!-- ===================================================== -->
+    <!-- STATIC CONNECTIONS -->
+    <!-- ===================================================== -->
+
+    <g
+      fill="none"
+      stroke="url(#graphGradient)"
+      stroke-width="1.4"
+      stroke-linecap="round">
+
+      <!-- root -> agents -->
+
+      <path
+        d="M748 140 L850 75"
+        opacity="0.58"/>
+
+      <path
+        d="M748 140 L850 205"
+        opacity="0.58"/>
+
+
+      <!-- agents -> orchestrator -->
+
+      <path
+        d="M860 75 L962 140"
+        opacity="0.62"/>
+
+      <path
+        d="M860 205 L962 140"
+        opacity="0.62"/>
+
+
+      <!-- orchestrator -> outputs -->
+
+      <path
+        d="M978 140 L1085 88"
+        opacity="0.68"/>
+
+      <path
+        d="M978 140 L1085 192"
+        opacity="0.68"/>
+
+    </g>
+
+
+    <!-- ===================================================== -->
+    <!-- ANIMATED CONNECTION PULSES -->
+    <!-- ===================================================== -->
+
+    <g
+      fill="none"
+      stroke="#2DE1C2"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-dasharray="3 14">
+
+      <path
+        d="M748 140 L850 75"
+        stroke-dashoffset="0">
+
+        <animate
+          attributeName="stroke-dashoffset"
+          from="0"
+          to="-34"
+          dur="1.5s"
+          repeatCount="indefinite"/>
+
+      </path>
+
+      <path
+        d="M748 140 L850 205">
+
+        <animate
+          attributeName="stroke-dashoffset"
+          from="0"
+          to="-34"
+          dur="1.8s"
+          repeatCount="indefinite"/>
+
+      </path>
+
+      <path
+        d="M860 75 L962 140">
+
+        <animate
+          attributeName="stroke-dashoffset"
+          from="0"
+          to="-34"
+          dur="1.3s"
+          repeatCount="indefinite"/>
+
+      </path>
+
+      <path
+        d="M860 205 L962 140">
+
+        <animate
+          attributeName="stroke-dashoffset"
+          from="0"
+          to="-34"
+          dur="1.6s"
+          repeatCount="indefinite"/>
+
+      </path>
+
+      <path
+        d="M978 140 L1085 88">
+
+        <animate
+          attributeName="stroke-dashoffset"
+          from="0"
+          to="-34"
+          dur="1.4s"
+          repeatCount="indefinite"/>
+
+      </path>
+
+      <path
+        d="M978 140 L1085 192">
+
+        <animate
+          attributeName="stroke-dashoffset"
+          from="0"
+          to="-34"
+          dur="1.7s"
+          repeatCount="indefinite"/>
+
+      </path>
+
+    </g>
+
+
+    <!-- ===================================================== -->
+    <!-- FEEDBACK LOOP -->
+    <!-- ===================================================== -->
+
+    <path
+      d="M1085 192
+         C1120 232 1095 258 995 258
+         C875 258 748 230 748 153"
+      fill="none"
+      stroke="#8B7CFF"
+      stroke-width="1.4"
+      stroke-dasharray="5 8"
+      opacity="0.65">
+
+      <animate
+        attributeName="stroke-dashoffset"
+        from="0"
+        to="-52"
+        dur="2s"
+        repeatCount="indefinite"/>
+
+    </path>
+
+
+    <!-- ===================================================== -->
+    <!-- FEEDBACK LOOP HIGHLIGHT -->
+    <!-- ===================================================== -->
+
+    <path
+      d="M1085 192
+         C1120 232 1095 258 995 258
+         C875 258 748 230 748 153"
+      fill="none"
+      stroke="#2DE1C2"
+      stroke-width="2"
+      stroke-dasharray="2 28"
+      stroke-linecap="round">
+
+      <animate
+        attributeName="stroke-dashoffset"
+        from="0"
+        to="-60"
+        dur="2.2s"
+        repeatCount="indefinite"/>
+
+    </path>
+
+
+    <!-- ===================================================== -->
+    <!-- ROOT NODE -->
+    <!-- ===================================================== -->
+
+    <circle
+      cx="748"
+      cy="140"
+      r="13"
+      fill="#090D18"
+      stroke="#8B7CFF"
+      stroke-width="1.8"/>
+
+    <circle
+      cx="748"
+      cy="140"
+      r="4"
+      fill="#8B7CFF"
+      filter="url(#softGlow)">
+
+      <animate
+        attributeName="r"
+        values="4;7;4"
+        dur="1.8s"
+        repeatCount="indefinite"/>
+
+    </circle>
+
+
+    <!-- ===================================================== -->
+    <!-- UPPER AGENT -->
+    <!-- ===================================================== -->
+
+    <circle
+      cx="855"
+      cy="72"
+      r="10"
+      fill="#090D18"
+      stroke="#8B7CFF"
+      stroke-width="1.8"/>
+
+    <circle
+      cx="855"
+      cy="72"
+      r="3"
+      fill="#8B7CFF">
+
+      <animate
+        attributeName="opacity"
+        values="0.4;1;0.4"
+        dur="1.6s"
+        repeatCount="indefinite"/>
+
+    </circle>
+
+
+    <!-- ===================================================== -->
+    <!-- LOWER AGENT -->
+    <!-- ===================================================== -->
+
+    <circle
+      cx="855"
+      cy="208"
+      r="10"
+      fill="#090D18"
+      stroke="#8B7CFF"
+      stroke-width="1.8"/>
+
+    <circle
+      cx="855"
+      cy="208"
+      r="3"
+      fill="#8B7CFF">
+
+      <animate
+        attributeName="opacity"
+        values="1;0.35;1"
+        dur="1.9s"
+        repeatCount="indefinite"/>
+
+    </circle>
+
+
+    <!-- ===================================================== -->
+    <!-- CENTRAL ORCHESTRATOR -->
+    <!-- ===================================================== -->
+
+    <circle
+      cx="970"
+      cy="140"
+      r="18"
+      fill="#2DE1C2"
+      opacity="0.08">
+
+      <animate
+        attributeName="r"
+        values="16;24;16"
+        dur="2.2s"
+        repeatCount="indefinite"/>
+
+      <animate
+        attributeName="opacity"
+        values="0.04;0.12;0.04"
+        dur="2.2s"
+        repeatCount="indefinite"/>
+
+    </circle>
+
+    <circle
+      cx="970"
+      cy="140"
+      r="11"
+      fill="#07131A"
+      stroke="#2DE1C2"
+      stroke-width="2"
+      filter="url(#softGlow)"/>
+
+    <circle
+      cx="970"
+      cy="140"
+      r="4"
+      fill="#2DE1C2">
+
+      <animate
+        attributeName="r"
+        values="4;6;4"
+        dur="1.2s"
+        repeatCount="indefinite"/>
+
+    </circle>
+
+
+    <!-- ===================================================== -->
+    <!-- OUTPUT NODES -->
+    <!-- ===================================================== -->
+
+    <circle
+      cx="1090"
+      cy="88"
+      r="10"
+      fill="#090D18"
+      stroke="#2DE1C2"
+      stroke-width="1.8"/>
+
+    <circle
+      cx="1090"
+      cy="192"
+      r="10"
+      fill="#090D18"
+      stroke="#2DE1C2"
+      stroke-width="1.8"/>
+
+
+    <!-- ===================================================== -->
+    <!-- DATA PACKET 1 -->
+    <!-- ===================================================== -->
+
+    <circle
+      r="3.5"
+      fill="#FFFFFF"
+      filter="url(#softGlow)">
+
+      <animateMotion
+        dur="3.8s"
+        repeatCount="indefinite"
+        path="M748 140 L855 72 L970 140 L1090 88"/>
+
+    </circle>
+
+
+    <!-- ===================================================== -->
+    <!-- DATA PACKET 2 -->
+    <!-- ===================================================== -->
+
+    <circle
+      r="3"
+      fill="#2DE1C2"
+      filter="url(#softGlow)">
+
+      <animateMotion
+        dur="4.2s"
+        begin="1s"
+        repeatCount="indefinite"
+        path="M748 140 L855 208 L970 140 L1090 192"/>
+
+    </circle>
+
+
+    <!-- ===================================================== -->
+    <!-- DATA PACKET 3 / FEEDBACK -->
+    <!-- ===================================================== -->
+
+    <circle
+      r="3"
+      fill="#8B7CFF"
+      filter="url(#softGlow)">
+
+      <animateMotion
+        dur="5.2s"
+        begin="0.8s"
+        repeatCount="indefinite"
+        path="
+          M1090 192
+          C1120 232 1095 258 995 258
+          C875 258 748 230 748 153
+        "/>
+
+    </circle>
+
+
+    <!-- ===================================================== -->
+    <!-- GRAPH PARTICLES -->
+    <!-- ===================================================== -->
+
+    <g fill="#5FE8D5">
+
+      <circle cx="805" cy="106" r="1.3">
+        <animate
+          attributeName="opacity"
+          values="0.1;0.8;0.1"
+          dur="2s"
+          repeatCount="indefinite"/>
+      </circle>
+
+      <circle cx="815" cy="177" r="1.2">
+        <animate
+          attributeName="opacity"
+          values="0.8;0.1;0.8"
+          dur="2.6s"
+          repeatCount="indefinite"/>
+      </circle>
+
+      <circle cx="920" cy="108" r="1.2">
+        <animate
+          attributeName="opacity"
+          values="0.15;0.9;0.15"
+          dur="1.8s"
+          repeatCount="indefinite"/>
+      </circle>
+
+      <circle cx="920" cy="175" r="1.2">
+        <animate
+          attributeName="opacity"
+          values="0.8;0.15;0.8"
+          dur="2.3s"
+          repeatCount="indefinite"/>
+      </circle>
+
+      <circle cx="1030" cy="110" r="1.2">
+        <animate
+          attributeName="opacity"
+          values="0.1;0.8;0.1"
+          dur="2.1s"
+          repeatCount="indefinite"/>
+      </circle>
+
+      <circle cx="1035" cy="175" r="1.2">
+        <animate
+          attributeName="opacity"
+          values="0.7;0.1;0.7"
+          dur="2.5s"
+          repeatCount="indefinite"/>
+      </circle>
+
+    </g>
+
+  </g>
+
+
+  <!-- ========================================================= -->
+  <!-- GRAPH LABELS -->
+  <!-- ========================================================= -->
+
+  <g
+    font-family="'SF Mono','JetBrains Mono','Fira Code',Menlo,Consolas,monospace"
+    font-size="9"
+    letter-spacing="1.3">
+
+    <text
+      x="725"
+      y="120"
+      fill="#596581">
+      INPUT
+    </text>
+
+    <text
+      x="835"
+      y="55"
+      fill="#596581">
+      REASON
+    </text>
+
+    <text
+      x="835"
+      y="229"
+      fill="#596581">
+      PLAN
+    </text>
+
+    <text
+      x="1002"
+      y="125"
+      fill="#2DE1C2">
+      ORCHESTRATE
+    </text>
+
+    <text
+      x="1060"
+      y="75"
+      fill="#596581">
+      ACT
+    </text>
+
+    <text
+      x="1060"
+      y="217"
+      fill="#596581">
+      RECOVER
+    </text>
+
+  </g>
+
+
+  <!-- ========================================================= -->
+  <!-- SCANNING LINE -->
+  <!-- ========================================================= -->
+
+  <rect
+    x="50"
+    y="225"
+    width="520"
+    height="1"
+    fill="url(#accent)"
+    opacity="0.30">
+
+    <animate
+      attributeName="x"
+      values="50;570;50"
+      dur="6s"
+      repeatCount="indefinite"/>
+
+  </rect>
+
+
+  <!-- ========================================================= -->
+  <!-- SMALL DECORATIVE SIGNAL -->
+  <!-- ========================================================= -->
+
+  <g opacity="0.5">
+
+    <circle
+      cx="1160"
+      cy="35"
+      r="2"
+      fill="#2DE1C2">
+
+      <animate
+        attributeName="opacity"
+        values="0.2;1;0.2"
+        dur="1.5s"
+        repeatCount="indefinite"/>
+
+    </circle>
+
+    <circle
+      cx="1170"
+      cy="35"
+      r="2"
+      fill="#8B7CFF">
+
+      <animate
+        attributeName="opacity"
+        values="1;0.2;1"
+        dur="1.8s"
+        repeatCount="indefinite"/>
+
+    </circle>
+
+    <circle
+      cx="1180"
+      cy="35"
+      r="2"
+      fill="#5FE8D5">
+
+      <animate
+        attributeName="opacity"
+        values="0.3;1;0.3"
+        dur="2.1s"
+        repeatCount="indefinite"/>
+
+    </circle>
+
+  </g>
+
+</svg>
