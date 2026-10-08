@@ -1,1 +1,1 @@
-<img src="M-Talha/main/banner(1).svg" width="100%">
+<img src="M-Talha/banner(1).svg" width="100%">
