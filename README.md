@@ -4,7 +4,7 @@
 
 <h1 align="center">Hi 👋, I'm Muhammad Talha</h1>
 
-<h3 align="center">🎓 AI Student | 🤖 Machine Learning Enthusiast | 🐍 Python Developer</h3>
+<h3 align="center"> AI Student |  Machine Learning Enthusiast |  Python Developer</h3>
 
 <p align="center">
   <a href="https://github.com/Talha-Arshad8">
@@ -14,7 +14,7 @@
 
 ---
 
-## 👨‍💻 About Me
+##  About Me
 
 - 🎓 I'm a Artificial Intelligence student passionate about **Machine Learning and Software Development**
 - 🤖 Currently working on **Machine Learning projects**
